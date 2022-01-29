@@ -1,5 +1,8 @@
 <template>
-  <Tutorial />
+  <div class="div_component">
+    <h1>{{ $t('playersTitle') }}</h1>
+    <Tutorial />
+  </div>
 </template>
 
 <script>

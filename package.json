@@ -11,10 +11,10 @@
     "lint": "npm run lint:prettier",
     "lintfix": "prettier --write --list-different .",
     "test": "jest",
-    "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^7.2.0",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
