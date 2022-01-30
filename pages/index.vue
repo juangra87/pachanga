@@ -3,7 +3,6 @@
     <Skills class="div_component"/>
     <Players class="div_component"/>
     <Tutorial class="div_component"/>
-    <nuxt-link to="players">Jugadores</nuxt-link>
   </div>
 </template>
 
