@@ -1,5 +1,5 @@
 <template>
-  <div class="background_mid">
+  <div class="container">
     <Nuxt/>
   </div>
 </template>
@@ -13,25 +13,31 @@ export default {
 </script>
 
 <style>
-body {
+html, body {
   margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
 }
 
-.background_mid {
-  position: relative;
+.container {
   display: flex;
   justify-content: center;
-  min-height: 100%;
+  flex-direction: column;
+  height: 100%;
   min-width: 100%;
-  background: gray;
+  background: #cccccc;
   margin: 0;
 }
 
-.div_component {
+.content {
   background: white;
   overflow: hidden;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px 0 10px 0;
+  margin: 10px;
+}
+
+.content h1 {
+  align-content: center;
 }
 </style>

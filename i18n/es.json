@@ -1,4 +1,9 @@
 {
-  "skillTitle": "Habilidades",
+  "criteria": {
+    "newButton": "Añadir nuevo criterio",
+    "removeButton":"Borrar",
+    "newCriteriaPlaceHolder": "estado físico, habilidad, etc",
+    "title": "Criterios"
+  },
   "playersTitle": "Jugadores"
 }

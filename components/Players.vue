@@ -1,5 +1,7 @@
 <template>
+  <div>
   <h1>{{ $t('playersTitle') }}</h1>
+  </div>
 </template>
 
 <script>
