@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fpachanga\u002F_nuxt\u002Fstatic\u002F1643536979",layout:"default",error:a,serverRendered:true,routePath:"\u002Fen\u002Fplayers",config:{_app:{basePath:"\u002Fpachanga\u002F",assetsPath:"\u002Fpachanga\u002F_nuxt\u002F",cdnURL:a}}}}(null));
