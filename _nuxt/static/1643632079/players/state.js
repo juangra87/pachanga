@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002Fpachanga\u002F_nuxt\u002Fstatic\u002F1643632079",layout:"default",error:a,state:{criteria:{list:[],nextId:b},players:{list:[],nextId:b},i18n:{routeParams:{}}},serverRendered:true,routePath:"\u002Fplayers",config:{_app:{basePath:"\u002Fpachanga\u002F",assetsPath:"\u002Fpachanga\u002F_nuxt\u002F",cdnURL:a}}}}(null,0));
