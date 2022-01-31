@@ -18,3 +18,7 @@ export const mutations = {
     console.log("Criteria removed: "+ id)
   }
 }
+
+export const getters = {
+  getAll(state){ return state.list}
+}

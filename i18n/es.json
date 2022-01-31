@@ -1,9 +1,10 @@
 {
   "criteria": {
-    "newButton": "Añadir nuevo criterio",
-    "removeButton":"Borrar",
-    "newCriteriaPlaceHolder": "estado físico, habilidad, etc",
-    "title": "Criterios"
+    "title": "Criterios",
+    "newCriteriaPlaceHolder": "Estado físico, habilidad, etc"
   },
-  "playersTitle": "Jugadores"
+  "player": {
+    "title": "Jugadores",
+    "newPlayerPlaceHolder": "Nombre del jugador"
+  }
 }
