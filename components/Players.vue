@@ -3,7 +3,8 @@
     <div class="content_title">
       <h1>{{ $t('player.title') }}</h1>
     </div>
-    <div class="inner_content form_creation">
+    <div class="content_expand form_creation">
+      <div class="inner_content form_creation">
       <input v-model="playerName" v-bind:placeholder="$t('player.newPlayerPlaceHolder')" type="text"/>
       <div class="criterias_insertion" v-for="criteria in criterias" :key="criteria.id">
         <select v-bind:placeholder="criteria.name">
@@ -11,7 +12,7 @@
         </select>
       </div>
       <img class="icon_as_button" :src="'icons/add.ico'" @click="add" />
-    </div>
+      </div>
     <ul class="inner_content">
       <li v-for="player in players" :key="player.id">
         <p>{{player.name}}</p>
@@ -21,6 +22,7 @@
         </p>
       </li>
     </ul>
+    </div>
   </div>
 </template>
 

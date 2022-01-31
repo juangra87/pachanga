@@ -3,16 +3,19 @@
     <div class="content_title">
       <h1>{{ $t('criteria.title') }}</h1>
     </div>
-    <div class="inner_content form_creation">
-    <input class="input_text" v-model="criteriaName" v-bind:placeholder="$t('criteria.newCriteriaPlaceHolder')" type="text"/>
-      <img class="icon_as_button" :src="'icons/add.ico'" @click="add" />
+    <div class="content_expand">
+      <div class="inner_content form_creation">
+        <input class="input_text" v-model="criteriaName" v-bind:placeholder="$t('criteria.newCriteriaPlaceHolder')" type="text"/>
+        <img class="icon_as_button" :src="'icons/add.ico'" @click="add" />
+      </div>
+      <ul class="content_list">
+        <li  class="inner_content elements_list"v-for="criteria in criterias" :key="criteria.id">
+          <p>{{criteria.name}}</p>
+          <img class="icon_as_button" :src="'icons/remove.ico'" @click="remove(criteria.id)" />
+        </li>
+      </ul>
     </div>
-    <ul class="content_list">
-      <li  class="inner_content elements_list"v-for="criteria in criterias" :key="criteria.id">
-        <p>{{criteria.name}}</p>
-        <img class="icon_as_button" :src="'icons/remove.ico'" @click="remove(criteria.id)" />
-      </li>
-    </ul>
+
   </div>
 </template>
 

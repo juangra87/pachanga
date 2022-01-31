@@ -33,7 +33,7 @@ html, body {
   background: white;
   overflow: visible;
   border-radius: 5px;
-  margin: 1rem;
+  margin: 0.5rem;
   box-shadow: 5px 5px 4px #888888;
 }
 
@@ -44,8 +44,13 @@ html, body {
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
-  background: #010203;
+  background: #333333;
   margin-bottom: 1rem;
+  color: #62d562;
+}
+
+.content_expand{
+  padding: 0.5rem;
 }
 
 input, select {
