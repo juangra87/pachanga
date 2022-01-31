@@ -27,21 +27,25 @@ html, body {
   height: 100%;
   min-width: 100%;
   background: #cccccc;
-  margin: 0;
-
 }
 
 .content {
   background: white;
   overflow: visible;
   border-radius: 5px;
-  padding: 20px;
-  margin: 20px;
+  margin: 1rem;
   box-shadow: 5px 5px 4px #888888;
 }
 
-.content h1 {
-  align-content: center;
+.content_title{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  background: #010203;
+  margin-bottom: 1rem;
 }
 
 input, select {
