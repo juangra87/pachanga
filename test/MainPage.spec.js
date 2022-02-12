@@ -1,6 +1,6 @@
 import {shallowMount, createLocalVue} from '@vue/test-utils'
 import Vuex from 'vuex'
-import CriteriaSelector from '@/components/CriteriaSelector.vue'
+import CriteriaSelector from '~/components/criteria/CriteriaSelector.vue'
 
 
 const localVue = createLocalVue()

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CriteriaSelector class="content"/>
+    <Criterias class="content"/>
     <Players class="content"/>
     <Tutorial class="content"/>
   </div>
@@ -8,10 +8,13 @@
 
 <script>
 import Vue from 'vue'
-import CriteriaSelector from "~/components/CriteriaSelector";
-import Players from "~/components/Players";
+import Criterias from "@/components/criteria/Criterias";
+import Players from "@/components/players/Players";
 
-export default Vue.extend({})
+export default Vue.extend({
+
+  components: {Criterias, Players},
+})
 </script>
 <style>
 

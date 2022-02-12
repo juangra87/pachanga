@@ -1,6 +1,9 @@
 export const state = () => ({
-  list: [],
-  nextId: 0
+  list: [] =[
+    {name:"Habilidad",id:"0"},
+    {name:"Forma física",id:"1"}
+  ],
+  nextId: 2
 })
 
 export const mutations = {

@@ -1,10 +1,16 @@
 {
   "criteria": {
     "title": "Criterios",
-    "newCriteriaPlaceHolder": "Estado físico, habilidad, etc"
+    "newCriteriaPlaceHolder": "Estado físico, habilidad, etc",
+    "errorMessage": {
+      "emptyName": "Por favor, inserta un criterio."
+    }
   },
   "player": {
     "title": "Jugadores",
-    "newPlayerPlaceHolder": "Nombre del jugador"
+    "newPlayerPlaceHolder": "Nombre del jugador",
+    "errorMessage": {
+      "emptyName": "Por favor, inserta un nombre de jugador."
+    }
   }
 }

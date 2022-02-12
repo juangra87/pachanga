@@ -50,28 +50,38 @@ html, body {
 }
 
 .content_expand{
-  padding: 0.5rem;
+  padding: 0.7rem;
 }
 
 input, select {
-  padding: 5px;
-  font-size: 1.2rem;
-  margin-right: 10px;
+  padding: 0.5rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 3px 3px 2px #888888;
 }
 
 .icon_as_button {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
 
 }
 
 .inner_content {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.elements_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.push_right {
+  margin-left: auto;
+  margin-right: 0.5vw;
 }
 </style>
