@@ -1,13 +1,13 @@
 <template>
-  <ul class="inner_content">
-    <li v-for="player in players" :key="player.id">
+  <div class="content_list">
+    <div class="inner_content" v-for="player in players" :key="player.id">
       <p>{{player.name}}</p>
-      <button @click="remove(player.id)">{{ $t('player.removeButton') }}</button>
       <p v-for="criteria in criterias" :key="criteria.id">
-        {{criteria.name}} - {{player.get[criteria.name]}}
+        {{criteria.name}} - {{player.criteriaValues[criteria.name]}}
       </p>
-    </li>
-  </ul>
+      <img class="icon_as_button push_right" :src="'icons/remove.ico'" @click="remove(criteria.id)" />
+    </div>
+  </div>
 </template>
 
 <script>

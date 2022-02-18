@@ -2,6 +2,7 @@
   "criteria": {
     "title": "Criterios",
     "newCriteriaPlaceHolder": "Estado físico, habilidad, etc",
+    "addButton": "Añadir criterio",
     "errorMessage": {
       "emptyName": "Por favor, inserta un criterio."
     }
@@ -9,8 +10,12 @@
   "player": {
     "title": "Jugadores",
     "newPlayerPlaceHolder": "Nombre del jugador",
+    "addButton": "Añadir jugador",
     "errorMessage": {
       "emptyName": "Por favor, inserta un nombre de jugador."
     }
+  },
+  "distribution": {
+    "title": "Distribución"
   }
 }

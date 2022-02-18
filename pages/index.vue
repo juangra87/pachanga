@@ -2,7 +2,7 @@
   <div>
     <Criterias class="content"/>
     <Players class="content"/>
-    <Tutorial class="content"/>
+    <Distribution class="content"/>
   </div>
 </template>
 
@@ -10,10 +10,11 @@
 import Vue from 'vue'
 import Criterias from "@/components/criteria/Criterias";
 import Players from "@/components/players/Players";
+import Distribution from "@/components/distribution/distribution";
 
 export default Vue.extend({
 
-  components: {Criterias, Players},
+  components: {Distribution, Criterias, Players},
 })
 </script>
 <style>

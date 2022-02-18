@@ -1,10 +1,13 @@
 <template>
   <div>
-  <div class="inner_content form_creation">
-    <input class="input_text" v-model="name" v-bind:placeholder="$t('criteria.newCriteriaPlaceHolder')"
-           type="text" required pattern="[a-z]"/>
-    <img class="icon_as_button push_right" :src="'icons/add.ico'" @click="add"/>
-  </div>
+    <div class="inner_content">
+      <input class="" v-model="name" v-bind:placeholder="$t('criteria.newCriteriaPlaceHolder')"
+             type="text" required pattern="[a-z]"
+             v-on:keyup.enter="add"/>
+    </div>
+    <div class="inner_content">
+      <button class="add_button" @click="add">{{ $t('criteria.addButton') }}</button>
+    </div>
     <hr>
   </div>
 </template>
@@ -16,13 +19,14 @@ export default {
   data() {
     return {
       name: "",
-      errorMessage:""}
+      errorMessage: ""
+    }
   },
   methods: {
     add() {
       if (this.name === '') {
         this.errorMessage = 'criteria.errorMessage.emptyName'
-      }else{
+      } else {
         this.$store.commit('criteria/add', {"name": this.name})
         this.errorMessage = ""
         this.name = ""

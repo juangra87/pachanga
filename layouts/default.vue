@@ -54,34 +54,42 @@ html, body {
 }
 
 input, select {
+  width: 100%;
   padding: 0.5rem;
   font-size: 1.1rem;
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 3px 3px 2px #888888;
+  flex: 1;
+}
+
+.add_button {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
+  background-color: #62d562;
 }
 
 .icon_as_button {
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
-
 }
 
 .inner_content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
+  gap: 1rem;
+
 }
 
-.elements_list {
-  display: flex;
-  justify-content: space-between;
+.inner_content > * {
+  align-self: center;
 }
 
-.push_right {
-  margin-left: auto;
-  margin-right: 0.5vw;
-}
 </style>
