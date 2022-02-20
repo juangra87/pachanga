@@ -5,8 +5,8 @@
     </div>
     <div class="inner_content">
       <div class="criterias_insertion" v-for="criteria in criterias" :key="criteria.id">
-        <p>{{ criteria.name }}</p>
-        <select>
+        <label>{{ criteria.name }}</label>
+        <select @change="setCriteriaValue($event, criteria.id)">
           <option>{{ criteria.name }}</option>
           <option v-model="playerCriteriaValues[criteria.name]" v-for="criteriaValues in criteriaValues" :key="criteriaValues" :value="criteriaValues">
             {{ criteriaValues }}
@@ -50,10 +50,21 @@ export default {
         this.name = ''
       }
     },
+    setCriteriaValue(event, criteriaName){
+      this.playerCriteriaValues[criteriaName]=event.target.value
+    }
   },
 }
 </script>
 
 <style scoped>
-
+.inner_content{
+  padding-top: 1rem;
+}
+label{
+  margin-top: 1rem;
+}
+.criterias_insertion{
+flex-grow: 1;
+}
 </style>
