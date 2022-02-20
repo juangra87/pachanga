@@ -1,7 +1,7 @@
 <template>
   <div class="content_list">
     <div class="inner_content">
-      <table>
+      <table v-if="players.length > 0">
         <tr>
           <td>{{ $t('player.title') }}</td>
           <td v-for="criteria in criterias" :key="criteria.id">{{ criteria.name }}</td>
