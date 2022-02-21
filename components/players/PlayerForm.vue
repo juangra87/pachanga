@@ -6,14 +6,11 @@
     <div class="inner_content">
       <div class="criterias_insertion" v-for="criteria in criterias" :key="criteria.id">
         <label>{{ criteria.name }}</label>
-        <select @change="setCriteriaValue($event, criteria.id)">
-          <option>{{ criteria.name }}</option>
-          <option v-model="playerCriteriaValues[criteria.name]" v-for="criteriaValues in criteriaValues" :key="criteriaValues" :value="criteriaValues">
-            {{ criteriaValues }}
-          </option>
-        </select>
+        <StarRating :stars="5" :value="0" :criteria-id="criteria.id" @update-value="setCriteriaValue"/>
       </div>
     </div>
+
+
     <div class="inner_content">
       <button class="add_button" @click="add">{{ $t('player.addButton') }}</button>
     </div>
@@ -23,9 +20,12 @@
 </template>
 
 <script>
-
+import StarRating from "@/components/rating/StarRating";
 export default {
   name: "PlayerForm",
+  components:{
+    StarRating
+  },
   data() {
     return {name: '', playerCriteriaValues: {}}
   },
@@ -45,13 +45,13 @@ export default {
       if (this.name === '') {
         this.errorMessage = 'player.errorMessage.emptyName'
       } else {
-        this.$store.commit('players/add', {"name": this.name, "criteriaValues":this.playerCriteriaValues})
+        this.$store.commit('players/add', {"name": this.name, "criteriaValues":Object.assign({}, this.playerCriteriaValues)})
         this.errorMessage = ''
         this.name = ''
       }
     },
-    setCriteriaValue(event, criteriaName){
-      this.playerCriteriaValues[criteriaName]=event.target.value
+    setCriteriaValue(object){
+      this.playerCriteriaValues[object.criteriaId]=object.value
     }
   },
 }

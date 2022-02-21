@@ -4,8 +4,6 @@
       <h1>{{ $t('distribution.title') }}</h1>
     </div>
     <div class="content_expand form_creation">
-      <PlayerForm/>
-      <PlayerList/>
     </div>
   </div>
 </template>

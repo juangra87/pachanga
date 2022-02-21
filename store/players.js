@@ -16,6 +16,13 @@ export const mutations = {
     }).indexOf(id);
     state.list.splice(index,1)
     console.log("Player removed: "+ id)
+  },
+  updateCriteriaValue(state, object) {
+    var index = state.list.map(x => {
+      return x.id;
+    }).indexOf(id);
+    state.list.splice(index,1)
+    console.log("Player removed: "+ id)
   }
 }
 
