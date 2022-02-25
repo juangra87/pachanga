@@ -16,6 +16,11 @@
     }
   },
   "distribution": {
-    "title": "Distribución"
+    "title": "Distribución",
+    "button": {
+      "random": "Aleatoria",
+      "optimized": "Optimizada"
+    },
+    "team": "Equipo"
   }
 }

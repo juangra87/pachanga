@@ -10,7 +10,7 @@
 import Vue from 'vue'
 import Criterias from "@/components/criteria/Criterias";
 import Players from "@/components/players/Players";
-import Distribution from "@/components/distribution/distribution";
+import Distribution from "@/components/distribution/Distribution";
 
 export default Vue.extend({
 

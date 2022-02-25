@@ -1,7 +1,7 @@
 <template>
   <div class="content_list">
     <div  class="inner_content" v-for="criteria in criterias" :key="criteria.id">
-      <p>{{criteria.name}}</p>
+      <h3>{{criteria.name}}</h3>
       <img class="icon_as_button push_right" :src="'icons/remove.ico'" @click="remove(criteria.id)" />
     </div>
   </div>

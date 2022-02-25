@@ -37,7 +37,7 @@ export default {
 img{
   width: 1.5rem;
   margin: 0.15rem;
-
+cursor:pointer
 }
 
 </style>

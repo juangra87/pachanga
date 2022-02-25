@@ -19,6 +19,10 @@ html, body {
   height: 100%;
   font-size: 1.15rem;
 }
+h3{
+  max-width: 40%;
+  font-size: 1.75rem;
+}
 
 .container {
   display: flex;
@@ -68,8 +72,9 @@ input, select {
   padding: 0.5rem;
   font-size: 1.1rem;
   margin: 10px 0 10px 0;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #62d562;
+  cursor: pointer;
 }
 
 .icon_as_button {
