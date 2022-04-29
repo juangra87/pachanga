@@ -17,11 +17,11 @@ html, body {
   margin: 0;
   font-family: Arial, sans-serif;
   height: 100%;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 h3{
   max-width: 40%;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .container {

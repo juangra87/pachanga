@@ -1,10 +1,12 @@
 <template>
 <div class="toolbar">
-  <button class="distribution_button random_button">{{ $t('distribution.button.random') }}</button>
-  <div v-for="criteria in criterias" :key="criteria.id">
-    <button class="distribution_button">{{ criteria.name }}</button>
-  </div>
-  <button class="distribution_button optimized_button">{{ $t('distribution.button.optimized') }}</button>
+  <select>
+    <option value="random">{{ $t('distribution.button.random') }}</option>
+    <option v-for="criteria in criterias" :key="criteria.id" :value="criteria.id">
+      {{ criteria.name }}
+    </option>
+    <option >{{ $t('distribution.button.optimized') }}</option>
+  </select>
 </div>
 </template>
 
@@ -31,7 +33,6 @@ export default {
 .distribution_button {
   padding: 1rem;
   font-size: 1.1rem;
-  margin: 10px 2px 10px 0;
   background-color: #62d562;
   cursor: pointer;
 }
