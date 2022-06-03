@@ -1,18 +1,10 @@
 <template>
   <div>
     <div class="inner_content">
-      <input v-model="name" v-bind:placeholder="$t('player.newPlayerPlaceHolder')" type="text" v-on:keyup.enter="add"/>
+      <textarea class="player_textArea" rows="10" v-model="list" v-bind:placeholder="$t('player.listOfPlayerPlaceHolder')" />
     </div>
     <div class="inner_content">
-      <div class="criterias_insertion" v-for="criteria in criterias" :key="criteria.id">
-        <label>{{ criteria.name }}</label>
-        <StarRating :stars="5" :value="0" :criteria-id="criteria.id" @update-value="setCriteriaValue"/>
-      </div>
-    </div>
-
-
-    <div class="inner_content">
-      <button class="add_button" @click="add">{{ $t('player.addButton') }}</button>
+      <button class="add_button" @click="add">{{ $t('player.addButton.list') }}</button>
     </div>
     <hr>
   </div>
@@ -27,7 +19,7 @@ export default {
     StarRating
   },
   data() {
-    return {name: '', playerCriteriaValues: {}}
+    return {list: '', playerCriteriaValues: {}}
   },
   computed: {
     players() {
@@ -42,16 +34,23 @@ export default {
   },
   methods: {
     add() {
-      if (this.name === '') {
+      if (this.list === '') {
         this.errorMessage = 'player.errorMessage.emptyName'
       } else {
-        this.$store.commit('players/add', {"name": this.name, "criteriaValues":Object.assign({}, this.playerCriteriaValues)})
+        //TODO move store logic to Vuex Actions
+        this.$store.commit('players/removeAll')
+        this.parseListOfPlayers(this.list).forEach(
+          player => {
+            this.$store.commit('players/add', {"name": player, "criteriaValues":Object.assign({}, this.playerCriteriaValues)})
+          })
         this.errorMessage = ''
-        this.name = ''
       }
     },
     setCriteriaValue(object){
       this.playerCriteriaValues[object.criteriaId]=object.value
+    },
+    parseListOfPlayers(textArea){
+      return textArea.split('\n')
     }
   },
 }
@@ -65,6 +64,10 @@ label{
   margin-top: 1rem;
 }
 .criterias_insertion{
-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.player_textArea {
+  width: 100%;
 }
 </style>

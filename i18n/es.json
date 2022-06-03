@@ -10,7 +10,12 @@
   "player": {
     "title": "Jugadores",
     "newPlayerPlaceHolder": "Nombre del jugador",
-    "addButton": "Añadir jugador",
+    "addButton":{
+      "list": "Añadir jugadores",
+      "one": "Añadir jugador"
+    },
+    "addButton.list": "Añadir jugadores",
+    "listOfPlayerPlaceHolder": "Inserta lista de jugadores (1 - Pepe ...)",
     "errorMessage": {
       "emptyName": "Por favor, inserta un nombre de jugador."
     }

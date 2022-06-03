@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Criterias class="content"/>
     <Players class="content"/>
+    <Criterias class="content"/>
     <Distribution class="content"/>
   </div>
 </template>
