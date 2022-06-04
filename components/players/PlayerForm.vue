@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="inner_content">
-      <textarea class="player_textArea" rows="10" v-model="list" v-bind:placeholder="$t('player.listOfPlayerPlaceHolder')" />
+      <textarea class="player_textArea"
+                rows="10"
+                v-model="list"
+                v-bind:placeholder="$t('player.listOfPlayerPlaceHolder')"
+      />
     </div>
     <div class="inner_content">
       <button class="add_button" @click="add">{{ $t('player.addButton.list') }}</button>

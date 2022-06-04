@@ -19,9 +19,12 @@ html, body {
   height: 100%;
   font-size: 1rem;
 }
+h1{
+  font-size: 1.05rem;
+}
 h3{
-  max-width: 40%;
-  font-size: 1.25rem;
+  width: 20%;
+  font-size: 0.95rem;
 }
 
 .container {
@@ -60,7 +63,7 @@ h3{
 input, select {
   width: 100%;
   padding: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 3px 3px 2px #888888;
@@ -70,7 +73,7 @@ input, select {
 .add_button {
   width: 100%;
   padding: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin: 10px 0 10px 0;
   border-radius: 10px;
   background-color: #62d562;
