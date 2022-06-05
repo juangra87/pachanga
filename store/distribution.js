@@ -1,10 +1,10 @@
-
+import {applyDistribution} from "@/src/services/distributionService";
 const DistributionCriteria = {
   RANDOM : {id: "100", name: "random"},
   OPTIMIZE : {id: "101", name: "optimize"}
 }
 export const state = () => ({
-  teams: [] = [["pepe","paco"],["antonio", "luis"]],
+  teams: [] ,
   distributionCriteriaList: [],
   distributionCriteria: DistributionCriteria.RANDOM
 })
@@ -18,6 +18,11 @@ export const mutations = {
   addDistributionCriteria(state, distributionCriteria) {
     state.distributionCriteria = distributionCriteria
   },
+  applyDistribution(state, payload){
+    console.log("Payload"+ payload.players)
+    console.log("Payload"+ payload.distributionCriteria)
+    state.teams = applyDistribution(payload.players, 2 , payload.distributionCriteria )
+  }
 }
 
 export const getters = {

@@ -1,13 +1,13 @@
 <template>
-<div class="toolbar">
-  <select>
-    <option value="random">{{ $t('distribution.button.random') }}</option>
-    <option v-for="criteria in criterias" :key="criteria.id" :value="criteria.id">
-      {{ criteria.name }}
-    </option>
-    <option >{{ $t('distribution.button.optimized') }}</option>
-  </select>
-</div>
+  <div class="toolbar">
+    <select @change="apply($event)">
+      <option value="random">{{ $t('distribution.button.random') }}</option>
+      <option v-for="criteria in criterias" :key="criteria.id" :value="criteria.id">
+        {{ criteria.name }}
+      </option>
+      <option>{{ $t('distribution.button.optimized') }}</option>
+    </select>
+  </div>
 </template>
 
 <script>
@@ -17,12 +17,20 @@ export default {
     criterias() {
       return this.$store.state.criteria.list
     }
+  },
+  methods: {
+    apply(value) {
+      this.$store.commit('distribution/applyDistribution', {
+        players: this.$store.state.players.list,
+        distributionCriteria: value
+      })
+    }
   }
 }
 </script>
 
 <style scoped>
-.toolbar{
+.toolbar {
   display: flex;
   align-content: center;
   width: 100%;
@@ -43,11 +51,12 @@ export default {
   color: white;
 }
 
-.random_button{
+.random_button {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
-.optimized_button{
+
+.optimized_button {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
