@@ -1,7 +1,7 @@
 export const state = () => ({
   list: [] =[
-    {name:"Habilidad",id:"0"},
-    {name:"Forma física",id:"1"}
+    {name:"Habilidad",id:0},
+    {name:"Forma física",id:1}
   ],
   nextId: 2,
   criteriaValues:[] = [0,1,2,3,4,5]

@@ -19,8 +19,6 @@ export const mutations = {
     state.distributionCriteria = distributionCriteria
   },
   applyDistribution(state, payload){
-    console.log("Payload"+ payload.players)
-    console.log("Payload"+ payload.distributionCriteria)
     state.teams = applyDistribution(payload.players, 2 , payload.distributionCriteria )
   }
 }

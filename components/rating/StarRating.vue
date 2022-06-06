@@ -9,8 +9,8 @@ export default {
   props: {
     stars: Number,
     value: Number,
-    criteriaId: String,
-    playerId: String
+    criteriaId: Number,
+    playerId: Number
   },
   data() {
     return {

@@ -23,7 +23,9 @@ export default {
     StarRating
   },
   data() {
-    return {list: '', playerCriteriaValues: {}}
+    return {
+      list: '',
+      playerCriteriaValues: {}}
   },
   computed: {
     players() {
@@ -45,13 +47,23 @@ export default {
         this.$store.commit('players/removeAll')
         this.parseListOfPlayers(this.list).forEach(
           player => {
-            this.$store.commit('players/add', {"name": player, "criteriaValues":Object.assign({}, this.playerCriteriaValues)})
+            this.$store.commit('players/add',
+              {
+                "name": player,
+                "criteriaValues":this.setDefaultCriteriaValues(3)
+              })
           })
         this.errorMessage = ''
       }
     },
-    setCriteriaValue(object){
-      this.playerCriteriaValues[object.criteriaId]=object.value
+    setDefaultCriteriaValues(defaultValue){
+      const values = {}
+      this.criterias.forEach(
+        criteria => {
+          values[criteria.id] = defaultValue
+        }
+      )
+      return values
     },
     parseListOfPlayers(textArea){
       return textArea.split('\n')

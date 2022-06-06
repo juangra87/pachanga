@@ -8,7 +8,7 @@ export const mutations = {
     player.id = state.nextId
     state.list.push(player)
     state.nextId++
-    console.debug("New player created: " + player)
+    console.debug("New player created: " + JSON.stringify(player))
   },
   remove(state, id) {
     var index = state.list.map(x => {
@@ -25,9 +25,9 @@ export const mutations = {
   updateCriteriaValue(state, object) {
     var index = state.list.map(x => {
       return x.id;
-    }).indexOf(id);
-    state.list.splice(index, 1)
-    console.debug("Player removed: " + id)
+    }).indexOf(object.playerId);
+    state.list[index].criteriaValues[object.criteriaId]=object.value
+    console.debug("Player updated: " + JSON.stringify(state.list[index]))
   }
 }
 

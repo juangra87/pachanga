@@ -36,7 +36,8 @@ export default {
       this.$store.commit('players/remove', id)
     },
     updateCriteriaValue(object) {
-
+      console.debug(JSON.stringify(object))
+      this.$store.commit('players/updateCriteriaValue', object)
     }
   },
 }
