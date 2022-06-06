@@ -1,11 +1,11 @@
 <template>
   <div class="toolbar">
-    <select @change="apply($event)">
-      <option value="random">{{ $t('distribution.button.random') }}</option>
+    <select @change="apply($event)" v-model="key">
+      <option value="100">{{ $t('distribution.button.random') }}</option>
       <option v-for="criteria in criterias" :key="criteria.id" :value="criteria.id">
         {{ criteria.name }}
       </option>
-      <option>{{ $t('distribution.button.optimized') }}</option>
+      <option value="101">{{ $t('distribution.button.optimized') }}</option>
     </select>
   </div>
 </template>
@@ -13,6 +13,11 @@
 <script>
 export default {
   name: "ToolBar",
+  data() {
+    return {
+      key: Number = 100
+    }
+  },
   computed: {
     criterias() {
       return this.$store.state.criteria.list
@@ -22,7 +27,7 @@ export default {
     apply(value) {
       this.$store.commit('distribution/applyDistribution', {
         players: this.$store.state.players.list,
-        distributionCriteria: value
+        distributionCriteria: this.key
       })
     }
   }

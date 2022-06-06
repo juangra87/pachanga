@@ -1,7 +1,7 @@
 import {applyDistribution} from "@/src/services/distributionService";
-const DistributionCriteria = {
-  RANDOM : {id: "100", name: "random"},
-  OPTIMIZE : {id: "101", name: "optimize"}
+export const DistributionCriteria = {
+  RANDOM : {id: 100, name: "random"},
+  OPTIMIZE : {id: 101, name: "optimize"}
 }
 export const state = () => ({
   teams: [] ,
